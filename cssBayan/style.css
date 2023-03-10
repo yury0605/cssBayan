@@ -9,7 +9,9 @@ p{
     margin: 0 0 5px;
 }
 .accordeon{
-   /* margin-top: 10%;*/
+   margin-right: auto;
+   margin-left: auto;
+   width:50%;
 }
 
 
@@ -19,7 +21,9 @@ position: absolute;
 width: 50%;
 margin-right: auto;
 margin-left: auto;
-border: 1px solid rgb(66, 64, 64);
+border: 1px solid rgb(114, 109, 109);
+border-left: none;
+border-right: none;
 }
 
 .mem1-title{
@@ -38,16 +42,13 @@ border: 1px solid rgb(66, 64, 64);
     border-style: solid;
     border-width: 10px 5px 0 5px;
     border-color: rgb(65, 65, 245) transparent transparent transparent;
-
     position: absolute;
     top: 50%;
     right: 3%;
     transform: translateY(-50%);
-    
+    z-index: -1;
 }
-.arrow:hover + .mem1-title { /*при наведении на стрелку цвет тайтла меняется на черный*/
-    color: black;   
-}
+
 
 .mem1-input:checked ~ .arrow { /*стрелка меняется при нажатии на инпут*/
     width: 0;
@@ -55,7 +56,7 @@ border: 1px solid rgb(66, 64, 64);
     border-style: solid;
     border-width: 0 5px 10px 5px;
     border-color: transparent transparent rgb(65, 65, 245) transparent;
-    
+    top:4%;
 
 }
 
