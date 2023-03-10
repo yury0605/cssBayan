@@ -4,7 +4,9 @@ body{
     font-size: 1.2em;
     font-weight: 600;
 }
-
+* {
+    box-sizing: border-box;
+}
 p{
     margin: 0 0 5px;
 }
@@ -12,13 +14,12 @@ p{
    margin-right: auto;
    margin-left: auto;
    width:50%;
+   
 }
 
 
-/* item start */
+/* item mem1 start */
 .mem1{
-position: absolute;
-width: 50%;
 margin-right: auto;
 margin-left: auto;
 border: 1px solid rgb(114, 109, 109);
@@ -32,9 +33,37 @@ border-right: none;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     padding-left: 0.5em;
-    color:rgb(65, 65, 245)
+    color:rgb(65, 65, 245);
+    position: relative;
 }
-.arrow{
+
+/*как на видео*/
+
+.mem1-title::after{
+    content: "";
+    display: block;
+    position: absolute;
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 5px 0 5px;
+    border-color: rgb(65, 65, 245) transparent transparent transparent;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+.mem1-input:checked ~ .mem1-title::after {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 10px 5px;
+    border-color: transparent transparent rgb(65, 65, 245) transparent;
+}    
+
+/*конец*/    
+
+/* .arrow{
     cursor: pointer;
     display: block;
     width: 0;
@@ -42,15 +71,15 @@ border-right: none;
     border-style: solid;
     border-width: 10px 5px 0 5px;
     border-color: rgb(65, 65, 245) transparent transparent transparent;
-    position: absolute;
     top: 50%;
     right: 3%;
     transform: translateY(-50%);
     z-index: -1;
+    position: absolute;
 }
 
 
-.mem1-input:checked ~ .arrow { /*стрелка меняется при нажатии на инпут*/
+.mem1-input:checked ~ .arrow { 
     width: 0;
     height: 0;
     border-style: solid;
@@ -58,24 +87,34 @@ border-right: none;
     border-color: transparent transparent rgb(65, 65, 245) transparent;
     top:4%;
 
-}
+} */
 
-.mem1-title:hover {
+.mem1-title:hover { /*меняется цвет тайтла при наведении курсором*/
     color: black;
 }
 
 .mem1-png{
    display: none;
-
 }
 
 .mem1-input{
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    position: absolute; /*убрать позже*/
-    
+    position: absolute;   
 }
 .mem1-input:checked ~ .mem1-png { /*появляется блок при нажатии на инпут*/
 display: block;
 }
+
+/* item mem1 finish */
+
+/* item mem2 start */
+.mem2{
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid rgb(114, 109, 109);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    }
