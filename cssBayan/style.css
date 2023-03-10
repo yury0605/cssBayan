@@ -1,3 +1,80 @@
 body{
     background-color: rgb(207, 221, 233);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+p{
+    margin: 0 0 5px;
+}
+.accordeon{
+   /* margin-top: 10%;*/
+}
+
+
+/* item start */
+.mem1{
+position: absolute;
+width: 50%;
+margin-right: auto;
+margin-left: auto;
+border: 1px solid rgb(66, 64, 64);
+}
+
+.mem1-title{
+    display: block;
+    cursor: pointer;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+    color:rgb(65, 65, 245)
+}
+.arrow{
+    cursor: pointer;
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 5px 0 5px;
+    border-color: rgb(65, 65, 245) transparent transparent transparent;
+
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translateY(-50%);
+    
+}
+.arrow:hover + .mem1-title { /*при наведении на стрелку цвет тайтла меняется на черный*/
+    color: black;   
+}
+
+.mem1-input:checked ~ .arrow { /*стрелка меняется при нажатии на инпут*/
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 10px 5px;
+    border-color: transparent transparent rgb(65, 65, 245) transparent;
+    
+
+}
+
+.mem1-title:hover {
+    color: black;
+}
+
+.mem1-png{
+   display: none;
+
+}
+
+.mem1-input{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute; /*убрать позже*/
+    
+}
+.mem1-input:checked ~ .mem1-png { /*появляется блок при нажатии на инпут*/
+display: block;
 }
