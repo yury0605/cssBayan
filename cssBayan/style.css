@@ -16,7 +16,7 @@ p{
    margin-left: auto;
    width:50%;
    }
-
+ 
 /* items start */
 .mem1{
 margin-right: auto;
@@ -52,6 +52,13 @@ border-right: none;
     transition: 0.5s;
 }
 
+.mem1.mem1:active .mem1-title {
+    color: yellow;
+}
+.mem1:active {
+   opacity: 0.6;
+} 
+
 .mem1-input{
     appearance: none;
     -webkit-appearance: none;
@@ -64,15 +71,18 @@ border-right: none;
 
 .mem1-png{
   cursor: pointer;  
+  width: 100%;
+  display: block;
+ /*  margin-left: 15%; */  
 }
 .mem1-png img{
     max-height: 0;
     transition: all 0.8s;
     margin: 1vh auto;
-}
-.image{
     width: auto;
+    height: auto;
 }
+
 
 /* items finish*/
 
