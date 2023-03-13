@@ -1,0 +1,151 @@
+body{
+    background-color: rgb(207, 221, 233);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+* {
+    box-sizing: border-box;
+}
+p{
+    margin: 0 0 5px;
+}
+
+.accordeon{
+   margin-right: auto;
+   margin-left: auto;
+   width:50%;
+   }
+ 
+/* items start */
+.mem1{
+margin-right: auto;
+margin-left: auto;
+border: 1px solid rgb(114, 109, 109);
+border-left: none;
+border-right: none;
+}
+.mem2{
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid rgb(114, 109, 109);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    }
+.mem3{
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid rgb(114, 109, 109);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+.mem1-title{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+    color:rgb(65, 65, 245);
+    transition: 0.5s;
+}
+
+.mem1.mem1:active .mem1-title {
+    color: yellow;
+}
+.mem1:active {
+   opacity: 0.6;
+} 
+
+.mem1-input{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+}
+.arrow{
+    display: none;
+    transition: all 0.5s;
+}
+
+.mem1-png{
+  cursor: pointer;  
+  width: 100%;
+  display: block;
+ /*  margin-left: 15%; */  
+}
+.mem1-png img{
+    max-height: 0;
+    transition: all 0.8s;
+    margin: 1vh auto;
+    width: auto;
+    height: auto;
+}
+
+
+/* items finish*/
+
+/* hovers start*/
+@media (hover:hover){
+.mem1:hover span{
+    transform: rotate(90deg);
+}
+.mem2:hover span{
+    transform: rotate(90deg);
+}
+.mem3:hover span{
+    transform: rotate(90deg);
+}
+.mem4:hover span{
+    transform: rotate(90deg);
+}    
+.image:hover{
+    transform: scale(1.02); 
+}
+.accordeon:hover .arrow{
+    display: block;
+}
+.accordeon:hover .mem1-title{
+    color: black;
+}
+.mem1-input:hover ~ .mem1-png img{ 
+    max-height: 100vh;
+}
+.mem1:hover { 
+    color: black;
+}
+}
+/*hovers finish*/
+
+/*clicking start*/
+.mem1-input:checked + .mem1-title{
+    color: black;
+}
+.mem1-input:checked ~ .mem1-png img{
+    max-height: 50vh;    
+}
+.mem1-input:checked + .mem1-title span {
+    transform: rotate(90deg);
+}
+/*clicking finish*/
+
+/*mobile & tablet*/
+@media screen and (max-width: 320px){
+   body{ 
+    font-size: 0.8em;
+   }
+   .accordeon{
+    width: 80%;
+   }
+   .mem1-png img{
+    width: auto;
+   }
+}
+@media screen and (max-width: 820px){
+    body{ 
+        font-size: 1em;
+       }   
+}
+
+  
